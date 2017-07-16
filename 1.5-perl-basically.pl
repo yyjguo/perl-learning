@@ -53,3 +53,30 @@ $string = '
 ';
 
 print "$string\n";
+
+
+=pod 特殊字符
+特殊字符的应用
+__FILE__,__LINE,__PACKAGE__ 分别表示当前执行脚本的文件名，行号，包名。
+这些特殊字符是单独的标记，不能写在字符串中
+=cut
+
+print "文件名". __FILE__ . "\n";
+print "行号" . __LINE__ . "\n";
+print "包名" .__PACKAGE__ ."\n";
+
+#无法解析
+print "__FILE__ __LINE__ __PACKAGE__ \n";
+
+=pod V字符串
+一个以 v 开头,后面跟着一个或多个用句点分隔的整数,会被当作一个字串文本。
+当你想为每个字符 直接声明其数字值时,v-字串提供了一种更清晰的构造这类字串的方法，而不像 "\x{1}\x{14}\x{12c}\x{fa0}" 这种不易于理解，看下面的实例：
+=cut
+
+@smile = v9786;
+$foo = v102.111.111;
+$martin = v77.97.114.116.105.110;
+
+print "smile = $smile\n";
+print "foo = $foo\n";
+print "martin = $martin\n";
