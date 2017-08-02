@@ -1,6 +1,8 @@
 #！／usr/bin/perl
 
 #这是一行注释
+use strict;
+use warnings;
 print "Hello World\n";
 
 =pod 注释
