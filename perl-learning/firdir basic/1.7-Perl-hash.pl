@@ -78,3 +78,5 @@ print "3-hash-size: $size\n";
 $data{'facebook'}= 'facebook.com';
 print "\$data{'facebook'} = $data{'facebook'}\n";
 
+#最好使得哈希名和键之间可以放进去一个for,比如family_name
+#对任何需要逗号的地方都可以用胖箭头表示 =>
